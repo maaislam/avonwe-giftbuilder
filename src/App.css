@@ -1,0 +1,22 @@
+body.giftbuilder-body {
+    position: relative;
+    overflow-x: hidden
+}
+
+@media only screen and (max-width: 575px) {
+    body.giftbuilder-body {
+        position: relative;
+        overflow-x: visible;
+    }
+}
+
+
+.appwrapper {
+    margin-top: 50px;
+    font-family: 'Montserrat';
+}
+
+.appwrapper img {
+    max-width: 100%;
+    height: auto;
+}
