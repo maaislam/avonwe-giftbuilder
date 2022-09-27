@@ -1,28 +1,28 @@
 export const pamperData = [
   {
     name: 'GORGEOUS & GLAM',
-    currentPrice: 1200,
-    prevPrice: 2000,
+    currentPrice: 12,
+    prevPrice: 20,
     image: 'gift-pamper1.png',
     description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
     btnText: 'Shop now',
     choice1: {
       stepTitle: 'Choose the perfect lip shade and finish',
-      handles: ['avon-true-colour-lipstick', 'new-ultra-shimmer-lipstick'],
+      handles: ['17122', '19365'],
     },
     choice2: {
       stepTitle: 'Choose to hightlight or bronze',
-      handles: ['true-colour-glow-bronzing-pearls', 'true-colour-illuminating-pearls'],
+      handles: ['12504', '3935'],
     },
     choice3: {
       stepTitle: 'Choose a gorgeous make-up brush',
-      handles: ['all-over-face-brush', 'angled-blush-brush', 'kabuki-brush'],
+      handles: ['11774', '11775', '11782'],
     },
   },
   {
     name: 'SKINCARE SAVIOURS',
-    currentPrice: 2600,
-    prevPrice: 4000,
+    currentPrice: 26,
+    prevPrice: 40,
     image: 'gift-pamper2.png',
     description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
     btnText: 'Shop now',
@@ -49,8 +49,8 @@ export const pamperData = [
   },
   {
     name: 'RELAX & PAMPER',
-    currentPrice: 1400,
-    prevPrice: 2000,
+    currentPrice: 14,
+    prevPrice: 20,
     image: 'gift-pamper3.png',
     description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
     btnText: 'Shop now',
@@ -69,8 +69,8 @@ export const pamperData = [
   },
   {
     name: 'COSY & CHILLED',
-    currentPrice: 1200,
-    prevPrice: 2000,
+    currentPrice: 12,
+    prevPrice: 20,
     image: 'gift-pamper3.png',
     description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
     btnText: 'Shop now',

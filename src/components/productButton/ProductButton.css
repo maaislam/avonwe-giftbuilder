@@ -7,12 +7,13 @@ button.product-primary-btn {
     user-select: none;
     border: 1px solid transparent;
     text-decoration: none;
+    font-family: Montserrat-Bold, Arial;
     color: #fff;
     line-height: 1.4;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 2px;
-    background-color: #000;
+    border-radius: 4px;
+    background-color: #7f28c4;
     transition: color .35s ease-in-out, background-color .35s ease-in-out, border-color .35s ease-in-out, box-shadow .35s ease-in-out;
     cursor: pointer;
     padding: 0 !important;
@@ -20,7 +21,7 @@ button.product-primary-btn {
 
 button.product-primary-btn:hover {
     color: #fff;
-    background-color: #333;
+    background-color: #6a17ad;
 }
 
 button.product-primary-btn.remove {
@@ -36,9 +37,4 @@ button.product-primary-btn.remove:hover {
     background-color: #d9d9d9;
     border: 1px solid #212121;
 
-}
-
-button.product-primary-btn:hover {
-    color: #fff;
-    background-color: #333;
 }

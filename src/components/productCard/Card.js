@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { ChosenProductContext } from '../../contexts/ChosenProductContext';
 import { PdpPopupContext } from '../../contexts/PdpPopupContext';
 import { selectedProductContext } from '../../contexts/SelectedProductContext';
+import getImages from '../../helpers/getImages';
 
 import ProductButton from '../productButton/ProductButton';
 import ProductImage from '../productImgBlock/ProductImage';
@@ -11,34 +12,43 @@ import Ratings from '../productRatings/Ratings';
 import './Card.css';
 
 const Card = ({ cardData, selectedVariant, children, position }) => {
-  // console.log(selectedVariant);
-  const { id, stepId, compare_at_price, price, images, title, variants } = cardData;
-  //console.log('cardData', cardData, stepId);
+  // console.log(cardData);
+  const { Id, stepId, ListPrice, SalePrice, ProfileNumber, Name, Rating, RatingCount, VariantGroups } = cardData;
+  const { Variants } = VariantGroups[0];
   const [btnText, setBtnText] = useState('');
+  const [cardImages, setCardImages] = useState([]);
 
   const { setPopupState } = useContext(PdpPopupContext);
   const { selectedProducts, setSelectedProducts } = useContext(selectedProductContext);
   const { setChosenProduct } = useContext(ChosenProductContext);
 
   useEffect(() => {
-    const btnType = variants.length > 1 ? 'Choose' : 'Select';
-    const isProductAdded = selectedProducts.some((item) => item.id === id);
+    const getImgs = async () => {
+      const imgSrc = await getImages(ProfileNumber);
+
+      setCardImages(imgSrc);
+    };
+
+    const btnType = Variants.length > 1 ? 'Choose' : 'Select';
+    const isProductAdded = selectedProducts.some((item) => item.Id === Id);
 
     setBtnText(isProductAdded ? 'Remove' : btnType);
-  }, [id, selectedProducts, variants.length]);
+
+    getImgs();
+  }, [Id, selectedProducts, Variants.length, ProfileNumber]);
 
   const btnClickHandler = (clickedBtnText) => {
     const popupContainer = document.getElementById('gift-builder-modal');
     //console.log(e.target.innerText);
-    const btnType = variants.length > 1 ? 'Choose' : 'Select';
+    const btnType = Variants.length > 1 ? 'Choose' : 'Select';
     if (clickedBtnText === 'Select') {
       //setBtnText('Remove');
-      const variantSelected = !selectedVariant || Object.keys(selectedVariant).length === 0 ? variants[0] : selectedVariant;
-      const selectionData = [...selectedProducts, { ...cardData, variantSelected }];
+      const variantSelected = !selectedVariant || Object.keys(selectedVariant).length === 0 ? Variants[0] : selectedVariant;
+      const selectionData = [...selectedProducts, { ...cardData, cardImages, Variants, variantSelected }];
       //remove duplicates\\
       const uniqueSelectionData = [];
       selectionData.forEach((element) => {
-        const duplicateIdx = uniqueSelectionData.findIndex((item) => item.id === element.id || item.stepId === stepId);
+        const duplicateIdx = uniqueSelectionData.findIndex((item) => item.Id === element.Id || item.stepId === stepId);
         if (duplicateIdx >= 0) {
           //remove old item make space for new one
 
@@ -57,21 +67,23 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
       const selectionData = [...selectedProducts];
       setSelectedProducts(selectionData);
       setPopupState(true);
-      setChosenProduct(cardData);
+      setChosenProduct({ ...cardData, cardImages, Variants });
       popupContainer.classList.add('active');
     } else if (clickedBtnText === 'Remove') {
       setBtnText(btnType);
-      const updatedState = selectedProducts.filter((item) => item.id !== id);
+      const updatedState = selectedProducts.filter((item) => item.Id !== Id);
       setSelectedProducts(updatedState);
     }
   };
 
+  //console.log(cardImages);
+
   return (
     <div className='product-card'>
-      <ProductImage images={images} title={title} position={position} />
+      <ProductImage images={cardImages} title={Name} position={position} />
       <div className='product-details-wrapper'>
-        <Ratings prodId={id} />
-        <ProductPrice oldPrice={compare_at_price} priceYouPay={price} />
+        <Ratings rating={Rating} ratingCount={RatingCount} />
+        <ProductPrice listPrice={ListPrice} salePrice={SalePrice} />
         {children}
         <ProductButton btnText={`${children ? 'Select' : btnText}`} btnClickHandler={btnClickHandler} />
       </div>

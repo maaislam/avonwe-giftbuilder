@@ -1,60 +1,61 @@
-.yotpo-bottomline {
-    margin-bottom: 10px
+@font-face {
+    font-family: "yotpo-widget-font";
+    src: url("//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2022-05-29_15-21-54");
+    src: url("//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2022-05-29_15-21-54#iefix") format("embedded-opentype"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.woff?version=2022-05-29_15-21-54") format("woff"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.ttf?version=2022-05-29_15-21-54") format("truetype"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2022-05-29_15-21-54") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.yotpo span.yotpo-rev-count {
-    margin-left: 6px;
+.yotpo-bottomline {
+    margin-bottom: 10px;
+}
+
+.total-review {
     font-size: 14px;
     line-height: 15px;
-    color: #6c6c6c;
-
-}
-
-@media only screen and (max-width: 800px) {
-    .yotpo span.yotpo-rev-count {
-        font-size: 12px;
-    }
+    color: #474747;
 }
 
 .yotpo-stars {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    background: -webkit-gradient(linear, left top, right top, from(#6b22c3), to(#db495f));
-    background: -o-linear-gradient(left, #6b22c3 0, #db495f 100%);
-    background: linear-gradient(90deg, #6b22c3 0, #db495f 100%)
+    margin-right: 12px;
+    background: -webkit-gradient(linear, left top, right top, from(#6B22C3), to(#DB495F));
+
 }
 
 .yotpo-icon {
     display: block;
     color: #ec008c;
-    background-color: #fff !important;
-    mix-blend-mode: luminosity
+    font-size: 16px;
+    background-color: #fff;
+    mix-blend-mode: luminosity;
 }
 
 .yotpo-icon::before {
     content: "\e60e";
-    font-family: yotpo-widget-font !important;
-    background: 0 0;
+    font-family: "yotpo-widget-font" !important;
+    background: transparent;
     background-clip: content-box;
     -webkit-background-clip: content;
-    -webkit-text-fill-color: inherit
+    -webkit-text-fill-color: inherit;
 }
 
 .yotpo-icon.empty-star::before {
     content: "\e61b";
-    font-family: yotpo-widget-font !important;
-    background: 0 0;
+    font-family: "yotpo-widget-font" !important;
+    background: transparent;
     background-clip: content-box;
     -webkit-background-clip: content;
-    -webkit-text-fill-color: inherit
+    -webkit-text-fill-color: inherit;
 }
 
 .yotpo-icon.half-star::before {
     content: "\e61a";
-    font-family: yotpo-widget-font !important;
-    background: 0 0;
+    font-family: "yotpo-widget-font" !important;
+    font-size: 16px;
+    background: transparent;
     background-clip: content-box;
     -webkit-background-clip: content;
-    -webkit-text-fill-color: inherit
+    -webkit-text-fill-color: inherit;
 }

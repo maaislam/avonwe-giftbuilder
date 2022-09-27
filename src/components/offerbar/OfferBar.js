@@ -9,14 +9,16 @@ const OfferBar = ({ bundledPrice }) => {
 
   const [addtoCart, setAddtoCart] = useState('Add-to-cart');
 
+  console.log(selectedProducts);
+
   //console.log(selectedProducts);
   const cdnDomain = 'https://ucds.ams3.digitaloceanspaces.com/AvonGifting';
   const selectedCount = selectedProducts.length;
 
-  const imagesData = selectedProducts.map(({ images, title, variantSelected }) => {
+  const imagesData = selectedProducts.map(({ cardImages, Name, variantSelected }) => {
     return {
-      image: images[0],
-      title,
+      image: cardImages[0],
+      title: Name,
       variantSelected,
     };
   });
@@ -24,7 +26,7 @@ const OfferBar = ({ bundledPrice }) => {
   const total =
     selectedProducts.length > 2 &&
     selectedProducts.reduce((prev, curr) => {
-      return prev + curr.price;
+      return prev + curr.ListPrice;
     }, 0);
 
   useEffect(() => {
@@ -82,7 +84,7 @@ const OfferBar = ({ bundledPrice }) => {
         {selectedCount > 2 ? (
           <>
             <div className='offer-details'>
-              <ProductPrice oldPrice={bundledPrice} priceYouPay={total} />
+              <ProductPrice listPrice={total} salePrice={bundledPrice} />
             </div>
             <div className={`addtocart-btn ${addtoCart || 'add-to-cart'}`} onClick={() => setAddtoCart('Adding-to-cart')}>
               {addtoCart.split('-').join(' ') || 'Add to cart'}

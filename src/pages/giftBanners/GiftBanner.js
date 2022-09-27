@@ -14,10 +14,10 @@ const GiftBanner = ({ data, clickedTargetData }) => {
         <h4>Mix & Match</h4>
         <h3 className='giftbanner__name'>{name}</h3>
         <div className='giftbanner__priceblock'>
-          <ProductPrice oldPrice={prevPrice} priceYouPay={currentPrice} />
+          <ProductPrice listPrice={prevPrice} salePrice={currentPrice} />
         </div>
         <p className='giftBanner__description'> {description}</p>
-        <button className='giftbanner__button btn btn-primary' onClick={() => clickedTargetData(data)}>
+        <button className='giftbanner__button' onClick={() => clickedTargetData(data)}>
           {btnText}
         </button>
       </div>

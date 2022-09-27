@@ -3,7 +3,7 @@ import Card from '../../components/productCard/Card';
 
 const ProductsRow = ({ rowData, stepId }) => {
   const prodCards = rowData.map((cardData) => {
-    return <Card cardData={{ ...cardData, stepId }} key={cardData.id} />;
+    return <Card cardData={{ ...cardData, stepId }} key={cardData.Id} />;
   });
 
   return <div className='productsrow'>{prodCards}</div>;

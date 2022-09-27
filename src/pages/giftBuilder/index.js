@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PdpModal from '../../components/pdpPopup/PdpPopup';
 import Card from '../../components/productCard/Card';
-import VariantDropdown from '../../components/variantDropdown/VariantDropdown';
+
 import { ChosenProductContext } from '../../contexts/ChosenProductContext';
 import { PdpPopupContext } from '../../contexts/PdpPopupContext';
 import ProductRows from './ProductRows';
@@ -11,6 +11,7 @@ import formatPrice from '../../helpers/formatPrice';
 import OfferBar from '../../components/offerbar/OfferBar';
 import Loader from '../../components/Loader';
 import scrollToTop from '../../helpers/scrollTop';
+import Variants from '../../components/variantsBlock/Variants';
 
 const GiftBuilder = ({ pageData }) => {
   const { bundledPrice, allData } = pageData;
@@ -48,11 +49,7 @@ const GiftBuilder = ({ pageData }) => {
         {popupState && (
           <PdpModal>
             <Card cardData={chosenProduct} selectedVariant={selectedVariant} position={'modal'}>
-              <VariantDropdown
-                variants={chosenProduct.variants}
-                selected={selectedVariant}
-                onSelectionChange={onSelectionChange}
-              />
+              <Variants variants={chosenProduct.Variants} selected={selectedVariant} onSelectionChange={onSelectionChange} />
             </Card>
           </PdpModal>
         )}
