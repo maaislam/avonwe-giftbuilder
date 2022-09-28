@@ -35,9 +35,9 @@ const GiftBuilder = ({ pageData }) => {
     <div className='giftbuilder'>
       <div className='giftbuilder-wrapper'>
         <h4>
-          <b>Mix & Match Glam & Go</b> - 3 steps to earn yourself extra savings.
+          <span>Mix & Match Glam & Go</span> - 3 steps to earn yourself extra savings.
         </h4>
-        {bundledPrice ? <h2>{`Offer price: ${formatPrice(bundledPrice)}`}</h2> : ''}
+        {bundledPrice ? <h3>{`Offer price: ${formatPrice(bundledPrice)}`}</h3> : ''}
         {allData ? (
           <>
             <ProductRows rowsData={allData} />

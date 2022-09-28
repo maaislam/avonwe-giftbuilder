@@ -7,22 +7,25 @@
     font-display: swap;
 }
 
-.yotpo-bottomline {
+.yotpo-bottomLine {
     margin-bottom: 10px;
 }
 
-.yotpo span.yotpo-rev-count {
-    margin-left: 6px;
-    font-size: 12px;
-    line-height: 15px;
-
-
+.yotpo-bottomLine.rating-invisible {
+    opacity: 0;
 }
+
+.yotpo span.yotpo-rev-count {
+    margin-left: 4px;
+    font-size: 12px !important;
+    line-height: 15px;
+}
+
 
 
 .yotpo-stars {
     display: inline-flex;
-    margin-right: 12px;
+    margin-right: 4px;
     background: -webkit-gradient(linear, left top, right top, from(#6B22C3), to(#DB495F));
 
 }
@@ -33,6 +36,12 @@
     font-size: 16px;
     background-color: #fff;
     mix-blend-mode: luminosity;
+}
+
+@media only screen and (max-width: 400px) {
+    .yotpo .yotpo-icon {
+        font-size: 14px;
+    }
 }
 
 .yotpo-icon::before {

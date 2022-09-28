@@ -4,6 +4,12 @@
     margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 400px) {
+    .variant-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
 .variant-header {
     width: 100%;
     display: flex;
@@ -12,9 +18,13 @@
     padding-left: 0;
     font-size: 18px;
     line-height: 1.3;
-    color: #556264;
 
+}
 
+@media only screen and (max-width: 600px) {
+    .variant-header {
+        font-size: 16px
+    }
 }
 
 .variant-header--title {
@@ -29,6 +39,12 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .variant-wrapper .variant-options {
+        justify-content: space-evenly;
+    }
 }
 
 .variant-wrapper .variant-option {
@@ -68,7 +84,6 @@
 }
 
 .variant-option.not-available {
-    pointer-events: none;
     opacity: 0.6;
     text-decoration: line-through;
 }

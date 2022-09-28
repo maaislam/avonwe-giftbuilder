@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('MainContentWrapper'));
+
 root.render(
   <React.StrictMode>
     <App />
@@ -11,6 +12,7 @@ root.render(
 );
 
 const portalContainer = document.createElement('div');
+
 portalContainer.id = `gift-builder-modal`;
 
 document.body.classList.add('giftbuilder-body');

@@ -19,7 +19,7 @@ const Ratings = ({ rating, ratingCount }) => {
   };
 
   return (
-    <div className='yotpo bottomLine'>
+    <div className={`yotpo-bottomLine ${ratingCount ? '' : 'rating-invisible'}`}>
       <div className='yotpo-display-wrapper'>
         <div className='standalon-bottomline'>
           <div className='yotpo-bottomlie pull-left'>

@@ -44,6 +44,10 @@
     background-color: #fff;
 }
 
+.offerbar-container .current-price {
+    color: #fff;
+}
+
 .offerbar-container .original-price {
     color: #9F9F9F;
 }
@@ -60,6 +64,12 @@
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .offerbar-container .addtocart-btn {
+        max-width: 280px;}
+}
+
 
 .offerbar-container .addtocart-btn.adding {
     pointer-events: none;

@@ -8,15 +8,15 @@ export const pamperData = [
     btnText: 'Shop now',
     choice1: {
       stepTitle: 'Choose the perfect lip finish and shade.',
-      handles: ['17122', '19365'],
+      handles: ['20414', '17122', '19365'],
     },
     choice2: {
       stepTitle: 'Choose a highlighter or bronzer.',
-      handles: ['12504', '3935'],
+      handles: ['20415', '12504', '3935'],
     },
     choice3: {
       stepTitle: 'Choose a gorgeous make-up brush.',
-      handles: ['11774', '11775', '11782'],
+      handles: ['20416', '11775', '11782'],
     },
   },
   {
