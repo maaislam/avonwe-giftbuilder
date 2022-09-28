@@ -30,34 +30,30 @@ const OfferBar = ({ bundledPrice }) => {
     }, 0);
 
   useEffect(() => {
-    function delay(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
     const addAllToCart = async () => {
-      const addToCartEndpoint = '/cart/add.js';
-      const options = imagesData.map(({ variantSelected }) => {
-        const payload = {
-          id: variantSelected.id,
-          quantity: 1,
-        };
+      const addToCartEndpoint = '/api/cartapi/add';
+      const payloads = imagesData.map(({ variantSelected }) => {
         return {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(payload),
+          Campaign: window._ShopContext.CampaignNumber,
+          Quantity: 1,
+          Sku: variantSelected.Sku,
         };
       });
-      fetch(addToCartEndpoint, options[0])
-        .then(() => delay(1000))
-        .then(() => fetch(addToCartEndpoint, options[1]).then(() => delay(1000)))
-        .then(() => fetch(addToCartEndpoint, options[2]))
-        .then(() => {
-          setAddtoCart('Added-to-cart');
 
-          window.location.href = window.location.href.split('#')[0];
-        });
+      const options = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payloads),
+      };
+
+      fetch(addToCartEndpoint, options).then(() => {
+        setAddtoCart('Added-to-cart');
+
+        window.location.href = window.location.href.split('#')[0];
+      });
     };
     addtoCart === 'Adding-to-cart' && addAllToCart();
   }, [addtoCart, imagesData, setSelectedProducts]);

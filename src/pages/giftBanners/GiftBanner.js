@@ -12,7 +12,7 @@ const GiftBanner = ({ data, clickedTargetData }) => {
       <img className='giftbanner__image' src={IMG_SRC_BASE + image} alt={name} />
       <div className='giftbanner-bottom'>
         <h4>Mix & Match</h4>
-        <h3 className='giftbanner__name'>{name}</h3>
+        <div className='giftbanner__name'>{name}</div>
         <div className='giftbanner__priceblock'>
           <ProductPrice listPrice={prevPrice} salePrice={currentPrice} />
         </div>

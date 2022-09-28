@@ -1,7 +1,7 @@
 .product-card {
     display: block;
     width: 100%;
-    max-width: 280px;
+    max-width: min-content;
 
 }
 

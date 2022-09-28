@@ -38,14 +38,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-
-
+    gap: 36px;
+    padding: 0 20px;
 }
 
 @media only screen and (max-width: 575px) {
     .productsrow {
         gap: 14px;
+        padding: 0 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .productsrow {
+        gap: 14px 0;
+        padding: 0 10px;
     }
 }
 
@@ -59,6 +66,11 @@
 
 .productrow-header {
     margin: 0 auto;
+}
+
+.productrow-header .productrow-number {
+    font-weight: 700;
+    color: #000;
 }
 
 .productrow-header p.productrow-title {

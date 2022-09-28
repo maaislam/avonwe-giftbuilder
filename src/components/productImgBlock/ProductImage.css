@@ -1,23 +1,26 @@
 .product-image-container p {
-    min-height: 60px;
+    min-height: 40px;
+    margin: 12px 0;
     text-align: left;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.3;
-    font-weight: 500;
     color: #000;
 }
 
+
+
 @media only screen and (max-width: 400px) {
     .product-image-container p {
-        min-height: 80px;
+        min-height: 60px;
 
     }
 }
 
 .product-image-container .product-image {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -26,8 +29,8 @@
 
 @media only screen and (max-width: 800px) {
     .product-image-container .product-image {
-        width: 230px;
-        height: 230px;
+        width: 160px;
+        height: 160px;
     }
 }
 

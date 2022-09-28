@@ -11,11 +11,14 @@
     margin-bottom: 10px;
 }
 
-.total-review {
-    font-size: 14px;
+.yotpo span.yotpo-rev-count {
+    margin-left: 6px;
+    font-size: 12px;
     line-height: 15px;
-    color: #474747;
+
+
 }
+
 
 .yotpo-stars {
     display: inline-flex;
