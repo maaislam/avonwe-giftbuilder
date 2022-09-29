@@ -14,7 +14,7 @@ import scrollToTop from '../../helpers/scrollTop';
 import Variants from '../../components/variantsBlock/Variants';
 
 const GiftBuilder = ({ pageData }) => {
-  const { bundledPrice, allData } = pageData;
+  const { bundledPrice, dealTitle, allData } = pageData;
   //console.log(pageData);
   useEffect(() => {
     scrollToTop();
@@ -35,7 +35,7 @@ const GiftBuilder = ({ pageData }) => {
     <div className='giftbuilder'>
       <div className='giftbuilder-wrapper'>
         <h4>
-          <span>Mix & Match Glam & Go</span> - 3 steps to earn yourself extra savings.
+          <span>{dealTitle}</span>.
         </h4>
         {bundledPrice ? <h3>{`Offer price: ${formatPrice(bundledPrice)}`}</h3> : ''}
         {allData ? (

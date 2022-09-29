@@ -71,3 +71,15 @@
 .giftbanner__button:hover {
     background-color: #6a17ad;
 }
+
+.giftbanner__priceblock .product-price {
+    text-align: center;
+}
+
+.giftbanner__priceblock .current-price {
+    font-size: 24px;
+}
+
+.giftbanner__priceblock .original-price {
+    font-size: 16px;
+}

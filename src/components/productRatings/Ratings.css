@@ -15,7 +15,7 @@
     opacity: 0;
 }
 
-.yotpo span.yotpo-rev-count {
+.yotpo-rev-count {
     margin-left: 4px;
     font-size: 12px !important;
     line-height: 15px;
@@ -38,9 +38,9 @@
     mix-blend-mode: luminosity;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .yotpo .yotpo-icon {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 

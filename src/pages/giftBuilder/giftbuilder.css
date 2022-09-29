@@ -30,7 +30,11 @@
 }
 
 .giftbuilder-wrapper h4 span {
-    font-weight: 700;
+    font-weight: 500;
+}
+
+.giftbuilder-wrapper h3 {
+    color: #7F28C4;
 }
 
 @media only screen and (max-width: 600px) {
@@ -38,7 +42,7 @@
     .giftbuilder-wrapper h4,
     h3 {
         padding: 0 16px;
-        font-size: 22px;
+        font-size: 16px;
     }
 }
 
@@ -70,8 +74,14 @@
 
 @media only screen and (max-width: 600px) {
     .productsrow {
+
         gap: 14px;
         padding: 0 14px;
+    }
+
+    .productsrow .product-card:nth-child(odd) {
+        margin-right: auto;
+
     }
 }
 
@@ -81,9 +91,6 @@
         padding: 0 10px;
     }
 
-    .productsrow .product-card:last-child {
-        margin-right: auto;
-    }
 }
 
 

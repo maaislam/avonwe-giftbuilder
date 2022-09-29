@@ -8,12 +8,26 @@ import ProductButton from '../productButton/ProductButton';
 import ProductImage from '../productImgBlock/ProductImage';
 import ProductPrice from '../productPriceBlock/ProductPrice';
 import Ratings from '../productRatings/Ratings';
+import UnitPrice from '../unitPrice/UnitPrice';
 
 import './Card.css';
 
 const Card = ({ cardData, selectedVariant, children, position }) => {
   // console.log(cardData);
-  const { Id, stepId, ListPrice, SalePrice, ProfileNumber, Name, Rating, RatingCount, VariantGroups } = cardData;
+  const {
+    Id,
+    stepId,
+    ListPrice,
+    SalePrice,
+    ProfileNumber,
+    Name,
+    PricePerUnitInformation,
+    Rating,
+    RatingCount,
+    UnitPriceFormatted,
+    UnitPriceMeasureUnit,
+    VariantGroups,
+  } = cardData;
   const { Variants } = VariantGroups[0];
   const [btnText, setBtnText] = useState('');
   const [cardImages, setCardImages] = useState([]);
@@ -83,7 +97,16 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
       <ProductImage images={cardImages} title={Name} position={position} />
       <div className='product-details-wrapper'>
         <Ratings rating={Rating} ratingCount={RatingCount} />
-        <ProductPrice listPrice={ListPrice} salePrice={SalePrice} />
+        <ProductPrice
+          listPrice={ListPrice}
+          salePrice={SalePrice}
+          unitPriceInfo={PricePerUnitInformation}
+          unitPrice={UnitPriceFormatted}
+          measureUnit={UnitPriceMeasureUnit}
+        >
+          <UnitPrice unitPrice={UnitPriceFormatted} unitPriceInfo={PricePerUnitInformation} measureUnit={UnitPriceMeasureUnit} />
+        </ProductPrice>
+
         {children}
         <ProductButton btnText={`${children ? 'Select' : btnText}`} btnClickHandler={btnClickHandler} />
       </div>

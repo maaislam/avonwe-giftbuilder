@@ -47,6 +47,7 @@ const App = () => {
 
       const finalData = {
         bundledPrice: selectedBanner.currentPrice,
+        dealTitle: selectedBanner.dealTitle,
         allData: [
           { stepTitle: choice1.stepTitle, stepId: 1, data: data1 },
           { stepTitle: choice2.stepTitle, stepId: 2, data: data2 },
