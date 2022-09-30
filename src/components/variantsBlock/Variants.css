@@ -37,15 +37,16 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
     background-color: #fff;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .variant-wrapper .variant-options {
         justify-content: space-evenly;
     }
-}
+} */
 
 .variant-wrapper .variant-option {
     display: flex;
@@ -55,10 +56,12 @@
     cursor: pointer;
     width: 48px;
     height: 48px;
-    margin: 0 10px 10px 0;
+    margin: 0 12px 10px 0;
     border-radius: 50%;
     border: 1px solid #c0c0c0;
 }
+
+
 
 .variant-wrapper .variant-option.active-swatch {
     border: 2px solid #7f28c4;

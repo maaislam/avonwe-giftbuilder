@@ -29,7 +29,8 @@
 }
 
 .offerbar-container .selected-items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -67,7 +68,8 @@
 
 @media only screen and (max-width: 600px) {
     .offerbar-container .addtocart-btn {
-        max-width: 280px;}
+        max-width: 280px;
+    }
 }
 
 
