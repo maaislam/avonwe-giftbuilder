@@ -2,22 +2,22 @@ export const pamperData = [
   {
     name: 'Gorgeous & Glam Make-Up',
     currentPrice: 12,
-    prevPrice: 20,
+    prevPrice: 21,
     image: 'gift-pamper1.png',
     description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
     dealTitle: 'Gorgeous & Glam Make-Up Gift Set – 3 for £12 (worth up to £21)',
     btnText: 'Shop now',
     choice1: {
       stepTitle: 'Choose the perfect lip finish and shade.',
-      handles: ['20414', '17122', '19365'],
+      handles: ['20417', '20488'],
     },
     choice2: {
       stepTitle: 'Choose a highlighter or bronzer.',
-      handles: ['20415', '12504', '3935'],
+      handles: ['20418', '20489'],
     },
     choice3: {
       stepTitle: 'Choose a professional make-up brush.',
-      handles: ['20416', '11775', '11782'],
+      handles: ['20419', '20490', '20491'],
     },
   },
   {
@@ -28,26 +28,18 @@ export const pamperData = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     btnText: 'Shop now',
-    dealTitle: 'Cleansing & Radiant Skincare Gift Set – 3 for £28 (worth up to £49',
+    dealTitle: 'Cleansing & Radiant Skincare Gift Set – 3 for £28 (worth up to £49)',
     choice1: {
       stepTitle: 'Choose a refreshing cleanser.',
-      handles: [
-        'anew-micellar-water',
-        'new-anew-purifying-jelly-cleanser-with-charcoal-extract-150ml',
-        'anew-sensitive-cream-cleanser',
-      ],
+      handles: ['20519', '20520', '20521'],
     },
     choice2: {
       stepTitle: 'Choose the perfect moisturiser.',
-      handles: [
-        'anew-platinum-day-lifting-cream-spf25',
-        'anew-ultimate-night-restoring-cream',
-        'anew-sensitive-dual-collagen-cream',
-      ],
+      handles: ['20522', '20523', '20524'],
     },
     choice3: {
       stepTitle: 'Choose a skin-loving treatment.',
-      handles: ['anew-radiance-maximising-serum', 'anew-anti-wrinkle-smoothing-serum', 'anew-protinol-power-serum'],
+      handles: ['20525', '20526', '20527'],
     },
   },
   {
@@ -61,93 +53,81 @@ export const pamperData = [
     dealTitle: 'Relaxing & Pampering Gift Set – 3 for £12 (worth up to £23)',
     choice1: {
       stepTitle: 'Choose a relaxing face mask.',
-      handles: ['anew-radiance-maximising-gold-mask', 'anew-lifting-silver-mask-75ml', 'anew-revitalising-copper-mask'],
+      handles: ['20513', '20514', '20515'],
     },
     choice2: {
       stepTitle: 'Add the perfect head towel.',
-      handles: ['pink-wiggle-hair-towel'],
+      handles: ['20516'],
     },
     choice3: {
       stepTitle: 'Choose a nourishing hair treatment.',
-      handles: ['absolute-nourishment-treatment-hair-mask-150ml', 'reconstruction-treatment-hair-mask-150m'],
+      handles: ['20517', '20518'],
     },
   },
   {
     name: 'Cosy & Chilled',
     currentPrice: 12,
     prevPrice: 15,
-    image: 'gift-pamper3.png',
+    image: 'gift-pamper4.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     btnText: 'Shop now',
     dealTitle: 'Cosy & Chilled Gift Set – 3 for £12 (worth up to £15)',
     choice1: {
       stepTitle: 'Choose a relaxing treat.',
-      handles: [
-        'new-planet-spa-korean-charcoal-peel-off-face-mask-50ml',
-        'radiance-ritual-liquid-gold-peel-off-face-mask',
-        'new-planet-spa-heavenly-hydration-neck-chest-serum-50ml',
-      ],
+      handles: ['20499', '20500', '20501'],
     },
     choice2: {
       stepTitle: 'Choose a gorgeous fragrance.',
-      handles: ['new-vanilla-bean-diffuser-70ml', 'white-jasmine-diffuser', 'new-sweet-rose-reed-diffuser-70ml'],
+      handles: ['20502', '20503', '20504'],
     },
     choice3: {
       stepTitle: 'Choose a bold colour.',
-      handles: ['ultra-colour-60-second-express-nail-enamel'],
+      handles: ['20505'],
     },
   },
   {
     name: 'Calm & Unwinding',
     currentPrice: 12,
     prevPrice: 14,
-    image: 'gift-pamper3.png',
+    image: 'gift-pamper5.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     btnText: 'Shop now',
-    dealTitle: 'Calm & Unwinding Gift Set – 3 for £12 (worth up to £14',
+    dealTitle: 'Calm & Unwinding Gift Set – 3 for £12 (worth up to £14)',
     choice1: {
       stepTitle: 'Choose a scent-sational candle.',
-      handles: ['wild-berries-candle', 'sweet-rose-candle-120g', 'new-happy-uplifting-candle'],
+      handles: ['20420', '20482', '20483'],
     },
     choice2: {
-      stepTitle: 'Lorem ipsum dolor sit amet.',
-      handles: ['new-romantic-lamour-bubble-bath-500ml', 'white-lily-bubble-bath-500ml', 'lavender-bubble-bath-500ml'],
+      stepTitle: 'Choose a relaxing bubble bath.',
+      handles: ['20484', '20421', '20485'],
     },
     choice3: {
-      stepTitle: 'Lorem ipsum dolor sit amet.',
-      handles: [
-        'new-planet-spa-heavenly-hydration-moisturiser-200ml',
-        'planet-spa-radiance-ritual-golden-body-butter',
-        'new-planet-spa-energise-body-butter-200ml',
-      ],
+      stepTitle: 'Choose a luxurious body moisturiser.',
+      handles: ['20422', '20486', '20487'],
     },
   },
   {
     name: 'COOL & GROOMED',
     currentPrice: 15,
     prevPrice: 18,
-    image: 'gift-pamper3.png',
+    image: 'gift-pamper6.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     btnText: 'Shop now',
     dealTitle: 'Cool & Groome Gift Set – 3 for £15 (worth up to £18)',
     choice1: {
-      stepTitle: 'Lorem ipsum dolor sit amet.',
-      handles: ['kris-washbag', 'musk-marine-eau-de-toilette-75ml', 'musk-intense-eau-de-toilette-75ml'],
+      stepTitle: 'Add the sophisticated washbag.',
+      handles: ['20506'],
     },
     choice2: {
-      stepTitle: 'Lorem ipsum dolor sit amet.',
-      handles: ['musk-air-eau-de-toilette-75ml'],
+      stepTitle: 'Choose an invigorating aftershave.',
+      handles: ['20507', '20508', '20509'],
     },
     choice3: {
-      stepTitle: 'Lorem ipsum dolor sit amet.',
-      handles: [
-        'essentials-after-shave-balm-100ml',
-        'essentials-shave-gel-150ml',
-        'essentials-3-in-1-shampoo-conditioner-body-wash-200ml',
-      ],
+      stepTitle: 'Choose an essential grooming product.',
+      handles: ['20510', '20511', '20512'],
     },
   },
 ];

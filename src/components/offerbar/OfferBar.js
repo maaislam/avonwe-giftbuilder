@@ -7,7 +7,7 @@ import './Offerbar.css';
 const OfferBar = ({ bundledPrice }) => {
   const { selectedProducts, setSelectedProducts } = useContext(selectedProductContext);
 
-  const [addtoCart, setAddtoCart] = useState('Add-to-cart');
+  const [addtoCart, setAddtoCart] = useState('Add-to-bag');
 
   console.log(selectedProducts);
 
@@ -50,12 +50,12 @@ const OfferBar = ({ bundledPrice }) => {
       };
 
       fetch(addToCartEndpoint, options).then(() => {
-        setAddtoCart('Added-to-cart');
+        setAddtoCart('Added-to-bag');
 
         window.location.href = window.location.href.split('#')[0];
       });
     };
-    addtoCart === 'Adding-to-cart' && addAllToCart();
+    addtoCart === 'Adding-to-bag' && addAllToCart();
   }, [addtoCart, imagesData, setSelectedProducts]);
 
   return (
@@ -82,8 +82,8 @@ const OfferBar = ({ bundledPrice }) => {
             <div className='offer-details'>
               <ProductPrice listPrice={total} salePrice={bundledPrice} />
             </div>
-            <div className={`addtocart-btn ${addtoCart || 'add-to-cart'}`} onClick={() => setAddtoCart('Adding-to-cart')}>
-              {addtoCart.split('-').join(' ') || 'Add to cart'}
+            <div className={`addtocart-btn ${addtoCart || 'add-to-bag'}`} onClick={() => setAddtoCart('Adding-to-bag')}>
+              {addtoCart.split('-').join(' ') || 'Add to bag'}
             </div>
           </>
         ) : (

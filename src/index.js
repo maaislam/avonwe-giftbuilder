@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 
-console.log('I am here 1');
-console.log('root', document.getElementById('MainContentWrapper'));
-
 const root = ReactDOM.createRoot(document.getElementById('MainContentWrapper'));
-console.log('I am here 2');
+
 root.render(
   <React.StrictMode>
     <App />

@@ -21,7 +21,7 @@
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 280px;
+    height: auto;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -53,4 +53,9 @@
 
 .product-image-container .product-image.in-modal {
     width: 100%;
+}
+
+.read-more-less--more,
+.read-more-less--less {
+    color: #999;
 }

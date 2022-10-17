@@ -1,9 +1,9 @@
 .offerbar-container {
     position: sticky;
-    bottom: -120px;
+    bottom: -100px;
     width: 100vw;
     margin-inline-start: 50%;
-    padding: 20px 0 40px;
+    padding: 20px 0;
     color: #fff;
     background-color: rgba(33, 33, 33, 95%);
     transform: translateX(-50%);
@@ -17,7 +17,7 @@
 }
 
 .offerbar-container.no-item-selected {
-    bottom: -120px;
+    bottom: -100px;
     animation: slide-out-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -86,7 +86,7 @@
 @keyframes slide-in-bottom {
     0% {
 
-        bottom: -120px;
+        bottom: -100px;
     }
 
     100% {
@@ -100,6 +100,6 @@
     }
 
     100% {
-        bottom: -120px;
+        bottom: -100px;
     }
 }
