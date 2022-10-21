@@ -62,7 +62,9 @@
 
     if (isCartPage()) {
       //check if user has offer items in Cart
+      const cartPromo = document.querySelector('.Cart_Promotion');
       const allCartProducts = document.querySelectorAll('.Cart-Product');
+      cartPromo.classList.add('giftbuilder-hide');
 
       //   const offerProdCount = [...allCartProducts].map((cartProduct) => {
       //     //check if this is a offer product

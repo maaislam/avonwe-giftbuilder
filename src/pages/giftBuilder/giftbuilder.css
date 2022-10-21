@@ -70,11 +70,14 @@
 }
 
 .productsrow .product-card {
-    margin: 8px auto;
+    margin: 8px 16px;
 }
 
 @media only screen and (max-width: 600px) {
 
+    .productsrow .product-card {
+        margin: 8px auto;
+    }
 
     .productsrow .product-card:nth-child(odd) {
         margin-right: auto;

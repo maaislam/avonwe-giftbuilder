@@ -13,8 +13,9 @@ import UnitPrice from '../unitPrice/UnitPrice';
 import './Card.css';
 
 const Card = ({ cardData, selectedVariant, children, position }) => {
-  // console.log(cardData);
+  console.log(cardData);
   const {
+    Availability,
     Id,
     stepId,
     ListPrice,
@@ -108,7 +109,11 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
         </ProductPrice>
 
         {children}
-        <ProductButton btnText={`${children ? 'Select' : btnText}`} btnClickHandler={btnClickHandler} />
+        {Availability === 1 ? (
+          <ProductButton btnText={`${children ? 'Select' : btnText}`} btnClickHandler={btnClickHandler} />
+        ) : (
+          <ProductButton btnText='Out of stock' />
+        )}
       </div>
     </div>
   );

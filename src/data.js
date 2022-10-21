@@ -4,7 +4,7 @@ export const pamperData = [
     currentPrice: 12,
     prevPrice: 21,
     image: 'gift-pamper1.png',
-    description: 'Build your own cosy night in set, unlock magical savings of upto 15% off.Everyone deserse a cosy night in!',
+    description: 'Create a gorgeous and glam gift for a make-up guru this Christmas.',
     dealTitle: 'Gorgeous & Glam Make-Up Gift Set – 3 for £12 (worth up to £21)',
     btnText: 'Shop now',
     choice1: {
@@ -25,8 +25,7 @@ export const pamperData = [
     currentPrice: 28,
     prevPrice: 49,
     image: 'gift-pamper2.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Build the perfect cleansing and radiant gift for a skincare lover in your life.',
     btnText: 'Shop now',
     dealTitle: 'Cleansing & Radiant Skincare Gift Set – 3 for £28 (worth up to £49)',
     choice1: {
@@ -47,8 +46,7 @@ export const pamperData = [
     currentPrice: 12,
     prevPrice: 23,
     image: 'gift-pamper3.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Make a relaxing and pampering gift to spoil your loved one.',
     btnText: 'Shop now',
     dealTitle: 'Relaxing & Pampering Gift Set – 3 for £12 (worth up to £23)',
     choice1: {
@@ -69,8 +67,7 @@ export const pamperData = [
     currentPrice: 12,
     prevPrice: 15,
     image: 'gift-pamper4.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Build a cosy and chilled gift for a me-time treat this Christmas.',
     btnText: 'Shop now',
     dealTitle: 'Cosy & Chilled Gift Set – 3 for £12 (worth up to £15)',
     choice1: {
@@ -91,8 +88,7 @@ export const pamperData = [
     currentPrice: 12,
     prevPrice: 14,
     image: 'gift-pamper5.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Make a calm and unwinding gift to give a loved one some chill time.',
     btnText: 'Shop now',
     dealTitle: 'Calm & Unwinding Gift Set – 3 for £12 (worth up to £14)',
     choice1: {
@@ -113,8 +109,7 @@ export const pamperData = [
     currentPrice: 15,
     prevPrice: 18,
     image: 'gift-pamper6.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Create a cool and groomed gift to keep them feeling fresh.',
     btnText: 'Shop now',
     dealTitle: 'Cool & Groome Gift Set – 3 for £15 (worth up to £18)',
     choice1: {

@@ -25,11 +25,21 @@ button.product-primary-btn:hover {
 }
 
 button.product-primary-btn.remove {
+
     color: #000;
     background-color: #fff;
     border: 1px solid #212121;
     transition: all 0.3s ease;
 }
+
+button.product-primary-btn.out-of-stock {
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #E3E3E3;
+    pointer-events: none;
+}
+
 
 @media (hover: hover) and (pointer: fine) {
 

@@ -39,8 +39,15 @@
 
 @media only screen and (max-width: 380px) {
     .product-image-container .product-image {
-        width: 154px;
-        height: 154px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .product-image-container .product-image {
+        width: 130px;
+        height: 130px;
     }
 }
 

@@ -21,6 +21,10 @@ body.giftbuilder-body {
 .appwrapper {
     margin-top: 50px;
     font-family: 'Montserrat';
+
+}
+.appwrapper.giftbuilder{
+    margin-top: 10px; 
 }
 
 .appwrapper img {

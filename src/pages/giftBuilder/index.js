@@ -12,11 +12,13 @@ import OfferBar from '../../components/offerbar/OfferBar';
 import Loader from '../../components/Loader';
 import scrollToTop from '../../helpers/scrollTop';
 import Variants from '../../components/variantsBlock/Variants';
+import headerAdjust from '../../helpers/headerAdjust';
 
 const GiftBuilder = ({ pageData }) => {
   const { bundledPrice, dealTitle, allData } = pageData;
   //console.log(pageData);
   useEffect(() => {
+    headerAdjust();
     scrollToTop();
     window.location.hash = '#giftbuilder';
   }, []);
@@ -34,6 +36,7 @@ const GiftBuilder = ({ pageData }) => {
   return (
     <div className='giftbuilder'>
       <div className='giftbuilder-wrapper'>
+        <h1 className='giftbuilder-headline'>Build A Gift</h1>
         <h4>
           <span>{dealTitle}</span>.
         </h4>

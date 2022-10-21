@@ -86,23 +86,3 @@ const App = () => {
 };
 
 export default App;
-// fetch("https://www.shopwithmyrep.co.uk/api/productsapi/getproducts?language=en&campaignNumber=202209&productIds=17651", {
-//   "headers": {
-//     "accept": "application/json, text/javascript, */*; q=0.01",
-//     "accept-language": "en-US,en;q=0.9",
-//     "if-none-match": ":dtagent10249220905100923ypYa",
-//     "sec-ch-ua": "\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"",
-//     "sec-ch-ua-mobile": "?0",
-//     "sec-ch-ua-platform": "\"Windows\"",
-//     "sec-fetch-dest": "empty",
-//     "sec-fetch-mode": "cors",
-//     "sec-fetch-site": "same-origin",
-//     "x-requested-with": "XMLHttpRequest"
-//   },
-//   "referrer": "https://www.shopwithmyrep.co.uk/product/17122/true-colour-ultra-satin-lipstick?ticket=Oy9kZXNrdG9wLXNlYXJjaC9zZWFyY2gtYXNzaXN0YW50L3N1Z2dlc3RlZC1wcm9kdWN0czsjO3Byb2R1Y3Rfa2V5OzE3MTIyX1VLOzE3MTIyLTIxMjM5ODQyNTA3OTtPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOw&attach=25034594",
-//   "referrerPolicy": "strict-origin-when-cross-origin",
-//   "body": null,
-//   "method": "GET",
-//   "mode": "cors",
-//   "credentials": "include"
-// });
