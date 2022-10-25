@@ -25,7 +25,16 @@
 
 }
 
+.giftbuilder-headline {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    color: #000;
+    text-align: center;
+    border-bottom: 1px dotted #D9D9D9;
+}
+
 .giftbuilder-wrapper h4 {
+    color: #000;
     margin-bottom: 24px;
 }
 
@@ -58,7 +67,7 @@
 
 .productsrow {
     width: calc(100% - 40px);
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;

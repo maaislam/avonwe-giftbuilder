@@ -9,13 +9,14 @@ import ChosenProductContextProvider from './contexts/ChosenProductContext';
 
 import './App.css';
 import ErrorHandle from './components/ErrorHandle';
+import SelectedGiftOptionContextProvider from './contexts/SelectedGiftOptionContext';
 
 const App = () => {
-  const [selectedBanner, setSelectedBanner] = useState(null);
-  const [choice1, setChoice1] = useState([]);
-  const [choice2, setChoice2] = useState([]);
-  const [choice3, setChoice3] = useState([]);
+  const [selectedBanner, setSelectedBanner] = useState(JSON.parse(localStorage.getItem('avon-mealdeal-preselected')) || null);
+
   const [choiceRenderData, setChoiceRenderData] = useState({});
+
+  //const { setSelectedGiftOption } = useContext(selectedGiftOptionContext);
 
   const [httpErr, setHttpErr] = useState(false);
 
@@ -23,16 +24,19 @@ const App = () => {
 
   const bannerClickHandler = (data) => {
     setSelectedBanner(data);
-    setChoice1(data.choice1);
-    setChoice2(data.choice2);
-    setChoice3(data.choice3);
+
+    //setSelectedGiftOption(data);
   };
   useEffect(() => {
     const campaignID = window._ShopContext.CampaignNumber;
     const fetchURL = (campaignID, pIds) =>
       `/api/productsapi/getproducts?language=en&campaignNumber=${campaignID}&productIds=${pIds}`;
-    if (!selectedBanner) return;
+
+    if (!selectedBanner) {
+      return;
+    }
     const getSelectPageData = async () => {
+      const { choice1, choice2, choice3 } = selectedBanner;
       const response1 = await fetch(fetchURL(campaignID, choice1.handles.join()));
       const jsonData1 = await response1.json();
       const data1 = jsonData1.Data;
@@ -54,19 +58,21 @@ const App = () => {
           { stepTitle: choice3.stepTitle, stepId: 3, data: data3 },
         ],
       };
-      console.log('finalData', finalData);
+      //console.log('finalData', finalData);
       setChoiceRenderData(finalData);
+      localStorage.removeItem('avon-mealdeal-preselected');
     };
 
     getSelectPageData().catch((err) => {
       console.log(err);
       setHttpErr(true);
+      localStorage.removeItem('avon-mealdeal-preselected');
     });
-  }, [selectedBanner, choice1, choice2.handles, choice2.stepTitle, choice3.handles, choice3.stepTitle]);
+  }, [selectedBanner]);
 
   const renderApp = () => {
     if (selectedBanner && !httpErr) {
-      return <GiftBuilder pageData={choiceRenderData} />;
+      return <GiftBuilder pageData={choiceRenderData} currentSelection={selectedBanner} />;
     } else if (!selectedBanner && !httpErr) {
       return <GiftBanners bannersData={pamperData} bannerClickHandler={bannerClickHandler} />;
     } else if (httpErr) {
@@ -75,13 +81,15 @@ const App = () => {
   };
 
   return (
-    <ChosenProductContextProvider>
-      <SelectedProductContextProvider>
-        <PdpPopupContextProvider>
-          <main className='appwrapper'>{renderApp()}</main>
-        </PdpPopupContextProvider>
-      </SelectedProductContextProvider>
-    </ChosenProductContextProvider>
+    <SelectedGiftOptionContextProvider>
+      <ChosenProductContextProvider>
+        <SelectedProductContextProvider>
+          <PdpPopupContextProvider>
+            <main className='appwrapper'>{renderApp()}</main>
+          </PdpPopupContextProvider>
+        </SelectedProductContextProvider>
+      </ChosenProductContextProvider>
+    </SelectedGiftOptionContextProvider>
   );
 };
 

@@ -13,22 +13,26 @@ import Loader from '../../components/Loader';
 import scrollToTop from '../../helpers/scrollTop';
 import Variants from '../../components/variantsBlock/Variants';
 import headerAdjust from '../../helpers/headerAdjust';
+import { selectedGiftOptionContext } from '../../contexts/SelectedGiftOptionContext';
 
-const GiftBuilder = ({ pageData }) => {
+const GiftBuilder = ({ pageData, currentSelection }) => {
   const { bundledPrice, dealTitle, allData } = pageData;
-  //console.log(pageData);
-  useEffect(() => {
-    headerAdjust();
-    scrollToTop();
-    window.location.hash = '#giftbuilder';
-  }, []);
 
+  const { setSelectedGiftOption } = useContext(selectedGiftOptionContext);
   const { chosenProduct } = useContext(ChosenProductContext);
   const { popupState } = useContext(PdpPopupContext);
 
   //const initialVariant = chosenProduct ? chosenProduct.variants[0] : {};
 
   const [selectedVariant, setSelectedVariant] = useState({});
+  //console.log(pageData);
+  useEffect(() => {
+    currentSelection && setSelectedGiftOption(currentSelection);
+    headerAdjust();
+    scrollToTop();
+    window.location.hash = '#giftbuilder';
+  }, [currentSelection, setSelectedGiftOption]);
+
   const onSelectionChange = (variant) => {
     setSelectedVariant(variant);
   };

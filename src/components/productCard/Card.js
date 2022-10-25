@@ -13,7 +13,7 @@ import UnitPrice from '../unitPrice/UnitPrice';
 import './Card.css';
 
 const Card = ({ cardData, selectedVariant, children, position }) => {
-  console.log(cardData);
+  //console.log(cardData);
   const {
     Availability,
     Id,

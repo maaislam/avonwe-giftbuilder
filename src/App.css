@@ -3,6 +3,10 @@ body.giftbuilder-body {
     overflow-x: hidden
 }
 
+body.giftbuilder-body main {
+    padding-top: 0;
+}
+
 @media only screen and (max-width: 600px) {
     body.giftbuilder-body {
         position: relative;
@@ -15,20 +19,37 @@ body.giftbuilder-body {
         left: auto !important;
         transform: rotate(270deg) translate(50%, 100%)
     }
+
+    .meal-deal-breadcrumb {
+
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 976px;
+        padding: 1.2rem 1.2rem 0;
+        color: #a2acae;
+        font-size: 14px;
+        line-height: 1.3;
+    }
 }
 
 
 .appwrapper {
-    margin-top: 50px;
+    margin-top: 32px;
     font-family: 'Montserrat';
 
 }
-.appwrapper.giftbuilder{
-    margin-top: 10px; 
+
+.appwrapper.giftbuilder {
+    margin-top: 44px;
 }
 
 .appwrapper img {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+
+.meal-deal-breadcrumb a,
+.meal-deal-breadcrumb span {
+    color: #a2acae;
 }

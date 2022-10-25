@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageSlider from '../imageSlider/ImageSlider';
 
-import ReactReadMoreReadLess from 'react-read-more-read-less';
+//import ReactReadMoreReadLess from 'react-read-more-read-less';
 
 import './ProductImage.css';
 
@@ -12,9 +12,7 @@ const ProductImage = ({ title, images, position }) => {
         <ImageSlider images={images} title={title} position={position} />
       </div>
       <p className='product-name' title={title}>
-        <ReactReadMoreReadLess charLimit={25} readMoreText={'▼'} readLessText={'▲'}>
-          {title}
-        </ReactReadMoreReadLess>
+        {title}
       </p>
     </div>
   );

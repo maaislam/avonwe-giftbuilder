@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { selectedGiftOptionContext } from '../../contexts/SelectedGiftOptionContext';
 import { selectedProductContext } from '../../contexts/SelectedProductContext';
 import ProductPrice from '../productPriceBlock/ProductPrice';
 
@@ -6,10 +7,11 @@ import './Offerbar.css';
 
 const OfferBar = ({ bundledPrice }) => {
   const { selectedProducts, setSelectedProducts } = useContext(selectedProductContext);
+  const { selectedGiftOption } = useContext(selectedGiftOptionContext);
 
   const [addtoCart, setAddtoCart] = useState('Add-to-bag');
 
-  console.log(selectedProducts);
+  //console.log(selectedProducts);
 
   //console.log(selectedProducts);
   const cdnDomain = 'https://ucds.ams3.digitaloceanspaces.com/AvonGifting';
@@ -49,14 +51,16 @@ const OfferBar = ({ bundledPrice }) => {
         body: JSON.stringify(payloads),
       };
 
-      fetch(addToCartEndpoint, options).then(() => {
-        setAddtoCart('Added-to-bag');
-
-        window.location.href = window.location.href.split('#')[0];
-      });
+      const response = await fetch(addToCartEndpoint, options);
+      const data = await response.json();
+      console.log(data);
+      setAddtoCart('Added-to-bag');
+      //setSelectedProducts([]);
+      localStorage.setItem('avon-mealdeal-preselected', JSON.stringify(selectedGiftOption));
+      window.location.href = window.location.href.split('#')[0];
     };
-    addtoCart === 'Adding-to-bag' && addAllToCart();
-  }, [addtoCart, imagesData, setSelectedProducts]);
+    addtoCart === 'Adding-to-bag' && setTimeout(addAllToCart, 1000);
+  }, [addtoCart, imagesData, selectedGiftOption, setSelectedProducts]);
 
   return (
     <div className={`${selectedProducts.length > 0 ? 'item-selected' : 'no-item-selected'} offerbar-container`}>
